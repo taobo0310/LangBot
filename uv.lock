@@ -1971,7 +1971,7 @@ requires-dist = [
     { name = "ebooklib", specifier = ">=0.18" },
     { name = "gewechat-client", specifier = ">=0.1.5" },
     { name = "html2text", specifier = ">=2024.2.26" },
-    { name = "langbot-plugin", url = "https://github.com/langbot-app/langbot-plugin-sdk/archive/de9d464afddfcfcaf8ed51089f8dbc638c1a478c.zip" },
+    { name = "langbot-plugin", url = "https://github.com/langbot-app/langbot-plugin-sdk/archive/0a13f1552708a2ebe937bb209319616a64fcb04b.zip" },
     { name = "langchain", specifier = ">=0.2.0" },
     { name = "langchain-core", specifier = ">=1.2.28" },
     { name = "langchain-text-splitters", specifier = ">=1.1.2" },
@@ -2033,7 +2033,7 @@ dev = [
 [[package]]
 name = "langbot-plugin"
 version = "0.3.10"
-source = { url = "https://github.com/langbot-app/langbot-plugin-sdk/archive/de9d464afddfcfcaf8ed51089f8dbc638c1a478c.zip" }
+source = { url = "https://github.com/langbot-app/langbot-plugin-sdk/archive/0a13f1552708a2ebe937bb209319616a64fcb04b.zip" }
 dependencies = [
     { name = "aiofiles" },
     { name = "dotenv" },
@@ -2050,7 +2050,7 @@ dependencies = [
     { name = "watchdog" },
     { name = "websockets" },
 ]
-sdist = { hash = "sha256:b0ad8649daeb92d0339a49a6aa7b5031a3a9dedb77a5bf4ed77d32ab9b29239d" }
+sdist = { hash = "sha256:7b78e969e28275dfc6f6b8c3bda236ee1da058e653cbb11154346399f32d2fad" }
 
 [package.metadata]
 requires-dist = [
