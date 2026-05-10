@@ -886,6 +886,8 @@ const zhHans = {
     engineSettings: '引擎设置',
     engineSettingsDescription: '所选知识引擎的配置',
     engineSettingsReadonly: '编辑模式下不可修改',
+    engineSettingsInvalid: '引擎设置中存在无效项，请检查必填字段',
+    retrievalSettingsInvalid: '检索设置中存在无效项，请检查必填字段',
     retrievalSettings: '检索设置',
     retrievalSettingsDescription: '配置从此知识库检索文档的方式',
     dangerZone: '危险区域',

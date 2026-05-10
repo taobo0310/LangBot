@@ -195,6 +195,7 @@ export default function DynamicFormComponent({
   isEditing,
   externalDependentValues,
   systemContext,
+  onValidate,
 }: {
   itemConfigList: IDynamicFormItemSchema[];
   onSubmit?: (val: object) => unknown;
@@ -205,6 +206,9 @@ export default function DynamicFormComponent({
   /** Extra variables accessible via the `__system.*` namespace in show_if conditions.
    *  e.g. `{ is_wizard: true }` makes `show_if: { field: "__system.is_wizard", ... }` work. */
   systemContext?: Record<string, unknown>;
+  /** Callback to expose validation function to parent component.
+   *  Parent can call this function to trigger validation and get validity state. */
+  onValidate?: (validateFn: () => Promise<boolean>) => void;
 }) {
   const isInitialMount = useRef(true);
   const previousInitialValues = useRef(initialValues);
@@ -351,6 +355,17 @@ export default function DynamicFormComponent({
       };
     }, {} as FormValues),
   });
+
+  // Expose validation function to parent component
+  const validate = async (): Promise<boolean> => {
+    // Trigger validation for all fields
+    const result = await form.trigger();
+    return result;
+  };
+
+  useEffect(() => {
+    onValidate?.(validate);
+  }, [onValidate]);
 
   // 当 initialValues 变化时更新表单值
   // 但要避免因为内部表单更新触发的 onSubmit 导致的 initialValues 变化而重新设置表单

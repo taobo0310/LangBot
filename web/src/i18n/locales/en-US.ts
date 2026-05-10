@@ -928,6 +928,10 @@ const enUS = {
     engineSettingsDescription:
       'Configuration for the selected knowledge engine',
     engineSettingsReadonly: 'read-only in edit mode',
+    engineSettingsInvalid:
+      'Engine settings validation failed, please check required fields',
+    retrievalSettingsInvalid:
+      'Retrieval settings validation failed, please check required fields',
     retrievalSettings: 'Retrieval Settings',
     retrievalSettingsDescription:
       'Configure how documents are retrieved from this knowledge base',
